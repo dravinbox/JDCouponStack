@@ -15,7 +15,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
     user.cpp \
-    baseapi.cpp
+    baseapi.cpp \
+    colormodel.cpp \
+    colorbll.cpp
 
 RESOURCES += qml.qrc
 
@@ -32,4 +34,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     user.h \
-    baseapi.h
+    baseapi.h \
+    colormodel.h \
+    colorbll.h
+
+DISTFILES +=
