@@ -62,8 +62,7 @@ Page {
 
 
 /*##^## Designer {
-    D{i:0;autoSize:true;height:480;width:640}D{i:2;anchors_height:400;anchors_width:200}
+    D{i:0;autoSize:true;height:480;width:640}D{i:4;anchors_height:200}D{i:2;anchors_height:400;anchors_width:200}
 D{i:1;anchors_width:200;anchors_x:54;anchors_y:0}D{i:5;anchors_height:200;anchors_width:200;anchors_x:9;anchors_y:118}
-D{i:4;anchors_height:200}
 }
  ##^##*/

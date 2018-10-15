@@ -1,4 +1,5 @@
 import QtQuick 2.4
+import QtQuick.Controls 2.4
 import QtQuick.Dialogs 1.2
 import ColorBLL 1.0
 
@@ -13,7 +14,8 @@ TaskForm {
 
     }
     removeTaskBtn.onClicked: {
-        colorListModel.remove(colorListModel.count-1,1)
+//        colorListModel.remove(colorListModel.count-1,1)
+        colorBLL.removeColor()
 
     }
     function randomColorCode(){
@@ -53,25 +55,36 @@ TaskForm {
         id: colorBLL
     }
 
-    listView1.model: colorBLL.getModel()
+    listView1.model: colorBLL.data
     listView1.delegate: Item {
         x: 5
-        width: 80
+        width: 40
         height: 40
+//        anchors.fill: parent
         Row {
             id: row1
             Rectangle {
                 width: 40
                 height: 40
-                color: modelData.color
-                    //model.modelData.color
+                color: model.modelData.color
+//                anchors.left:parent.left
+//                anchors.leftMargin:80
             }
 
             Text {
-                text: modelData.name
+                text: model.modelData.name
                 anchors.verticalCenter: parent.verticalCenter
                 font.bold: true
             }
+            Button {
+                text: qsTr("删除")
+                onClicked: {
+                    console.log(model.modelData.name)
+                    console.log(model)
+                }
+
+            }
+
             spacing: 10
         }
     }
